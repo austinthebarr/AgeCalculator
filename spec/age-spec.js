@@ -1,10 +1,11 @@
-import { Age } from './../src/age.js';
-describe('Age', function(){
+import { Birthday } from './../src/age.js';
+describe('Birthday', function(){
 
-  it('should test whether an Age has three values', function(){
-    let age = new Age(09,07,1991);
-    expect(age.month).toEqual(09);
-    expect(age.day).toEqual(07);
-    expect(age.year).not.toEqual(1992);
+  it('should test whether an Age has four values', function(){
+    let date = new Birthday(9,7,1991,26);
+    expect(date.month).toEqual(9);
+    expect(date.day).toEqual(7);
+    expect(date.year).not.toEqual(1992);
+    expect(date.age).toEqual(26);
   });
 });
