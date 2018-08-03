@@ -11,4 +11,11 @@ export class Birthday {
     return conversion;
   }
 
+  compareGivenBirthday(){
+    let birthDate = new Date(this.year, this.month-1, this.day).getFullYear();
+    let currentDate = new Date().getFullYear();
+    let age = currentDate - birthDate;
+    return age;
+  }
+
 }

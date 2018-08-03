@@ -18,4 +18,14 @@ describe('Birthday', function(){
     let date = new Birthday(9,7,1991,27);
     expect(date.convertToMilli()).not.toEqual(820480752000);
   });
+
+  it('should calcuate age of user', function(){
+    let date = new Birthday(9,7,1991);
+    expect(date.compareGivenBirthday()).toEqual(27);
+  });
+
+  it('should calcuate age of user, should not be equal', function(){
+    let date = new Birthday(9,7,1991);
+    expect(date.compareGivenBirthday()).not.toEqual(25);
+  });
 });
