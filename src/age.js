@@ -19,13 +19,27 @@ export class Birthday {
   }
 
   mercuryAge(){
-    let mercuryAge = this.compareGivenBirthday()/.24;
-    return mercuryAge;
+    let mercuryAge = (this.compareGivenBirthday()/.24).toFixed(1);
+    let final = parseFloat(mercuryAge)
+    return final;
   }
 
-  VenusAge(){
-    let mercuryAge = this.compareGivenBirthday()/.62;
-    return mercuryAge;
+  venusAge(){
+    let venusAge = (this.compareGivenBirthday()/.62).toFixed(1);
+    let final = parseFloat(venusAge)
+    return final;
+  }
+
+  marsAge(){
+    let marsAge = (this.compareGivenBirthday()/1.88).toFixed(1);
+    let final = parseFloat(marsAge);
+    return final;
+  }
+
+  jupiterAge(){
+    let jupiterAge = (this.compareGivenBirthday()/11.86).toFixed(1);
+    let final = parseFloat(jupiterAge)
+    return final;
   }
 
 }
