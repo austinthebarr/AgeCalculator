@@ -6,40 +6,54 @@ export class Birthday {
     this.age = age;
   }
 
-  convertToMilli(){
-    let conversion = this.age * 31556952000;
+  compareGivenBirthday(){
+    let birthDate = new Date(this.year, this.month-1, this.day)
+    let currentDate = new Date()
+    console.log(currentDate.getMonth());
+    console.log(birthDate.getMonth())
+    let age = ((currentDate.getFullYear() * 31557600) - (birthDate.getFullYear() * 31557600));
+    if(currentDate.getMonth() > birthDate.getMonth())
+    {
+      (age - 31557600);
+      console.log("NOOO")
+      console.log(age)
+    } else if((currentDate.getMonth()) === (birthDate.getMonth()) && (currentDate.getDay()) > (birthDate.getDay())){
+      (age - 31557600);
+      console.log(age)
+    }
+      return age;
+
+  }
+
+  convertAgeFromSec(){
+    let conversion = this.compareGivenBirthday() / 31557600;
     return conversion;
   }
 
-  compareGivenBirthday(){
-    let birthDate = new Date(this.year, this.month-1, this.day).getFullYear();
-    let currentDate = new Date().getFullYear();
-    let age = currentDate - birthDate;
-    return age;
-  }
 
   mercuryAge(){
-    let mercuryAge = (this.compareGivenBirthday()/.24).toFixed(1);
+    let mercuryAge = (this.convertAgeFromSec()/.24).toFixed(1);
     let final = parseFloat(mercuryAge)
     return final;
   }
 
   venusAge(){
-    let venusAge = (this.compareGivenBirthday()/.62).toFixed(1);
+    let venusAge = (this.convertAgeFromSec()/.62).toFixed(1);
     let final = parseFloat(venusAge)
     return final;
   }
 
   marsAge(){
-    let marsAge = (this.compareGivenBirthday()/1.88).toFixed(1);
+    let marsAge = (this.convertAgeFromSec()/1.88).toFixed(1);
     let final = parseFloat(marsAge);
     return final;
   }
 
   jupiterAge(){
-    let jupiterAge = (this.compareGivenBirthday()/11.86).toFixed(1);
+    let jupiterAge = (this.convertAgeFromSec()/11.86).toFixed(1);
     let final = parseFloat(jupiterAge)
     return final;
   }
+
 
 }
