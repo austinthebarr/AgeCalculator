@@ -1,9 +1,9 @@
-export class Birthday {
-  constructor(month, day, year, age) {
+export class Person {
+  constructor(month, day, year, lifeExpectancy, smoke) {
     this.month = month;
     this.day = day;
     this.year = year;
-    this.age = age;
+    this.lifeExpectancy = 78;
   }
 
   compareGivenBirthday(){
@@ -50,6 +50,13 @@ export class Birthday {
     let jupiterAge = (this.convertAgeFromSec()/11.86).toFixed(1);
     let final = parseFloat(jupiterAge)
     return final;
+  }
+
+  lifeEnd(){
+    if(this.smoke === true){
+      this.lifeExpectancy - 10;
+    }
+    return this.lifeExpectancy;
   }
 
 
