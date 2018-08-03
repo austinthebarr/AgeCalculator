@@ -12,15 +12,11 @@ export class Birthday {
 
 
     let age = ((currentDate.getFullYear() * 31557600) - (birthDate.getFullYear() * 31557600));
-    console.log(age);
     if(currentDate.getMonth() < birthDate.getMonth())
     {
-      (age - 31557600);
-      console.log("NOOO")
-      console.log(age)
+      age -= 31557600;
     } else if((currentDate.getMonth()) === (birthDate.getMonth()) && (currentDate.getDay()) > (birthDate.getDay())){
-      (age - 31557600);
-      console.log(age)
+      age -= 31557600;
     }
       return age;
 
