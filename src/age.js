@@ -9,10 +9,11 @@ export class Birthday {
   compareGivenBirthday(){
     let birthDate = new Date(this.year, this.month-1, this.day)
     let currentDate = new Date()
-    console.log(currentDate.getMonth());
-    console.log(birthDate.getMonth())
+
+
     let age = ((currentDate.getFullYear() * 31557600) - (birthDate.getFullYear() * 31557600));
-    if(currentDate.getMonth() > birthDate.getMonth())
+    console.log(age);
+    if(currentDate.getMonth() < birthDate.getMonth())
     {
       (age - 31557600);
       console.log("NOOO")
