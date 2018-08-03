@@ -18,4 +18,14 @@ export class Birthday {
     return age;
   }
 
+  mercuryAge(){
+    let mercuryAge = this.compareGivenBirthday()/.24;
+    return mercuryAge;
+  }
+
+  VenusAge(){
+    let mercuryAge = this.compareGivenBirthday()/.62;
+    return mercuryAge;
+  }
+
 }

@@ -24,8 +24,24 @@ describe('Birthday', function(){
     expect(date.compareGivenBirthday()).toEqual(27);
   });
 
+  it('should calcuate age of user', function(){
+    let date = new Birthday(9,7,1990);
+    expect(date.compareGivenBirthday()).toEqual(28);
+  });
+
   it('should calcuate age of user, should not be equal', function(){
     let date = new Birthday(9,7,1991);
     expect(date.compareGivenBirthday()).not.toEqual(25);
   });
+
+  it('should calcuate the mercury age with the number given in specs', function(){
+    let date = new Birthday(9,7,1991);
+    expect(date.mercuryAge()).toEqual(112.5);
+  });
+
+  it('should calcuate the mercury age with the number given in specs, notEQUAL', function(){
+    let date = new Birthday(9,7,1991);
+    expect(date.mercuryAge()).not.toEqual(111.5);
+  });
+
 });
