@@ -6,8 +6,9 @@ export class Birthday {
     this.age = age;
   }
 
-  // determineAge(){
-  //   this.
-  // }
+  convertToMilli(){
+    let conversion = this.age * 31556952000;
+    return conversion;
+  }
 
 }

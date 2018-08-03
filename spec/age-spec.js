@@ -8,4 +8,14 @@ describe('Birthday', function(){
     expect(date.year).not.toEqual(1992);
     expect(date.age).toEqual(26);
   });
+
+  it('should convert age to milliseconds', function(){
+    let date = new Birthday(9,7,1991,26);
+    expect(date.convertToMilli()).toEqual(820480752000);
+  });
+
+  it('should convert age to milliseconds', function(){
+    let date = new Birthday(9,7,1991,27);
+    expect(date.convertToMilli()).not.toEqual(820480752000);
+  });
 });
