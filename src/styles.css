@@ -1,0 +1,6 @@
+body{
+    background-image: url("/src/images/space.jpg")
+}
+.hide {
+display: none;    
+}

@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import './styles.css';
+import './images/space.jpg';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Person } from './age.js';
@@ -15,5 +17,7 @@ $(function () {
     $(".venusAge").text(newPerson.venusAge(newPersonAge));
     $(".marsAge").text(newPerson.marsAge(newPersonAge));
     $(".jupiterAge").text(newPerson.jupiterAge(newPersonAge));
+    $(".secAge").text(newPerson.compareGivenBirthday());
+    $(".hide").show();
   });
 });
