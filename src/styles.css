@@ -1,6 +1,10 @@
 body{
-    background-image: url("/src/images/space.jpg")
+    background-image: url("./images/space.jpg");
 }
 .hide {
 display: none;    
+}
+
+#earth, #mercury, #venus, #mars, #jupiter, #sec, #enter {
+    color: whitesmoke;
 }
