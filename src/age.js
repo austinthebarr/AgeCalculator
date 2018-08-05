@@ -16,7 +16,7 @@ export class Person {
     } else if((currentDate.getMonth()) === (birthDate.getMonth()) && (currentDate.getDay()) > (birthDate.getDay())){
       age -= 31557600;
     }
-      return age;
+    return age;
 
   }
 
@@ -24,20 +24,20 @@ export class Person {
     let conversion = this.compareGivenBirthday() / 31557600;
     if(conversion > this.lifeExpectancy)
     {
-      conversion -= this.lifeExpectancy
+      conversion -= this.lifeExpectancy;
     }
     return conversion;
   }
 
   mercuryAge(age){
     let mercuryAge = (age/.24).toFixed(1);
-    let final = parseFloat(mercuryAge)
+    let final = parseFloat(mercuryAge);
     return final;
   }
 
   venusAge(age){
     let venusAge = (age/.62).toFixed(1);
-    let final = parseFloat(venusAge)
+    let final = parseFloat(venusAge);
     return final;
   }
 
@@ -49,7 +49,7 @@ export class Person {
 
   jupiterAge(age){
     let jupiterAge = (age/11.86).toFixed(1);
-    let final = parseFloat(jupiterAge)
+    let final = parseFloat(jupiterAge);
     return final;
   }
 
