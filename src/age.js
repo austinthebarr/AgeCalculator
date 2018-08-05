@@ -1,5 +1,5 @@
 export class Person {
-  constructor(month, day, year, lifeExpectancy, smoke) {
+  constructor(month, day, year) {
     this.month = month;
     this.day = day;
     this.year = year;
@@ -7,8 +7,8 @@ export class Person {
   }
 
   compareGivenBirthday(){
-    let birthDate = new Date(this.year, this.month-1, this.day)
-    const currentDate = new Date()
+    let birthDate = new Date(this.year, this.month-1, this.day);
+    const currentDate = new Date();
     let age = ((currentDate.getFullYear() * 31557600) - (birthDate.getFullYear() * 31557600));
     if(currentDate.getMonth() < birthDate.getMonth())
     {
